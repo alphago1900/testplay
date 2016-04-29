@@ -78,5 +78,5 @@
         "path": "/haha",
         "method": "get",
         "handler": "system.api.helloworld"
-    },
+    }
 ]
