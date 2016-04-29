@@ -73,5 +73,10 @@
         "path": "/tokens",
         "method": "get",
         "handler": "blockchain.token.getTokens"
-    }
+    },
+    {
+        "path": "/haha",
+        "method": "get",
+        "handler": "system.api.helloworld"
+    },
 ]
