@@ -50,7 +50,8 @@ Transactions.prototype.getTransactions = function (filter, cb) {
 		}
 	};
 
-	library.sandbox.sendMessage(message, cb);
+	cb(null,{haha:'hello anan'});
+	// library.sandbox.sendMessage(message, cb);
 }
 
 /**
