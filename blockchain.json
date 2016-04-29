@@ -269,6 +269,18 @@
 		]
 	},
 	{
+		"table": "asset_bets",
+    	"alias": "bet",
+    	"type": "table",
+    	"tableFields": [
+	        {
+	            "name": "betResult",
+	            "type": "String",
+	            "length": 320
+	        }
+    	]
+	},
+	{
 		"table": "asset_token",
 		"alias": "t_t",
 		"type": "table",

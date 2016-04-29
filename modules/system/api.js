@@ -60,9 +60,25 @@ Api.prototype.onBlockchainLoaded = function () {
 }
 
 Api.prototype.helloworld = function (cb) {
-	cb(null, {
-		test: "Hello, world!"
-	});
+
+	modules.api.sql.insert({
+        table: "asset_bets",
+        values: {
+            betResult: 'aa'
+        }
+    }, function(){
+
+	    	modules.api.sql.select({
+				table: "asset_bets"
+			}, function (err, found) {
+				cb(null, {
+					test: JSON.stringify(found)
+				});
+
+    		});
+    });
+
+	
 }
 
 Api.prototype.message = function (cb, query) {
