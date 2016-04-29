@@ -1,6 +1,6 @@
 [
 	{
-		"path": "/",
+		"path": "/hello",
 		"method": "get",
 		"handler": "system.api.helloworld"
 	},
