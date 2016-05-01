@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
 	Lisk transactions API calls
+=======
+    Lisk transactions API calls
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
  */
 
 var private = {}, self = null,
@@ -14,9 +18,15 @@ library = null, modules = null;
  * @constructor
  */
 function Transactions(cb, _library) {
+<<<<<<< HEAD
 	self = this;
 	library = _library;
 	cb(null, self);
+=======
+    self = this;
+    library = _library;
+    cb(null, self);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -34,6 +44,7 @@ function Transactions(cb, _library) {
  * @param {Transactions~getTransactionsCallback} cb - Callback handles response from Lisk.
  */
 Transactions.prototype.getTransactions = function (filter, cb) {
+<<<<<<< HEAD
 	var message = {
 		call: "transactions#getTransactions",
 		args: {
@@ -51,6 +62,25 @@ Transactions.prototype.getTransactions = function (filter, cb) {
 	};
 
 	library.sandbox.sendMessage(message, cb);
+=======
+    var message = {
+        call: "transactions#getTransactions",
+        args: {
+            blockId: filter.blockId,
+            limit: filter.limit,
+            type: filter.type,
+            orderBy: filter.orderBy,
+            offset: filter.offset,
+            senderPublicKey: filter.senderPublicKey,
+            senderId: filter.senderId,
+            recipientId: filter.recipientId,
+            senderUsername: filter.senderUsername,
+            recipientUsername: filter.recipientUsername
+        }
+    };
+
+    library.sandbox.sendMessage(message, cb);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -68,6 +98,7 @@ Transactions.prototype.getTransactions = function (filter, cb) {
  * @param {Transactions~getTransaction} cb - Callback handles response from Lisk.
  */
 Transactions.prototype.getTransaction = function (id, cb) {
+<<<<<<< HEAD
 	var message = {
 		call: "transactions#getTransaction",
 		args: {
@@ -76,6 +107,16 @@ Transactions.prototype.getTransaction = function (id, cb) {
 	};
 
 	library.sandbox.sendMessage(message, cb);
+=======
+    var message = {
+        call: "transactions#getTransaction",
+        args: {
+            id: id
+        }
+    };
+
+    library.sandbox.sendMessage(message, cb);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -91,6 +132,7 @@ Transactions.prototype.getTransaction = function (id, cb) {
  * @param {Transactions~getUnconfirmedTransaction} cb - Callback handles response from Lisk.
  */
 Transactions.prototype.getUnconfirmedTransaction = function (id, cb) {
+<<<<<<< HEAD
 	var message = {
 		call: "transactions#getUnconfirmedTransaction",
 		args: {
@@ -99,6 +141,16 @@ Transactions.prototype.getUnconfirmedTransaction = function (id, cb) {
 	};
 
 	library.sandbox.sendMessage(message, cb);
+=======
+    var message = {
+        call: "transactions#getUnconfirmedTransaction",
+        args: {
+            id: id
+        }
+    };
+
+    library.sandbox.sendMessage(message, cb);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -114,6 +166,7 @@ Transactions.prototype.getUnconfirmedTransaction = function (id, cb) {
  * @param {Transactions~getUnconfirmedTransactions} cb - Callback handles response from Lisk.
  */
 Transactions.prototype.getUnconfirmedTransactions = function (cb) {
+<<<<<<< HEAD
 	var message = {
 		call: "transactions#getUnconfirmedTransactions",
 		args: {
@@ -121,6 +174,15 @@ Transactions.prototype.getUnconfirmedTransactions = function (cb) {
 	};
 
 	library.sandbox.sendMessage(message, cb);
+=======
+    var message = {
+        call: "transactions#getUnconfirmedTransactions",
+        args: {
+        }
+    };
+
+    library.sandbox.sendMessage(message, cb);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -141,6 +203,7 @@ Transactions.prototype.getUnconfirmedTransactions = function (cb) {
  * @param {Transactions~addTransactionsCallback} cb - Callback handles response from Lisk.
  */
 Transactions.prototype.addTransactions = function (secret, amount, recipientId, publicKey, secondSecret, requesterPublicKey) {
+<<<<<<< HEAD
 	var message = {
 		call: "transactions#addTransactions",
 		args: {
@@ -154,6 +217,21 @@ Transactions.prototype.addTransactions = function (secret, amount, recipientId, 
 	};
 
 	library.sandbox.sendMessage(message, cb);
+=======
+    var message = {
+        call: "transactions#addTransactions",
+        args: {
+            secret: secret,
+            amount: amount,
+            recipientId: recipientId,
+            publicKey: publicKey,
+            secondSecret: secondSecret,
+            requesterPublicKey: requesterPublicKey
+        }
+    };
+
+    library.sandbox.sendMessage(message, cb);
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 }
 
 /**
@@ -164,7 +242,14 @@ Transactions.prototype.addTransactions = function (secret, amount, recipientId, 
  */
 
 Transactions.prototype.onBind = function (_modules) {
+<<<<<<< HEAD
 	modules = _modules;
 }
 
 module.exports = Transactions;
+=======
+    modules = _modules;
+}
+
+module.exports = Transactions;
+>>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
