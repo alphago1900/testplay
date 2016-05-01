@@ -269,8 +269,6 @@
 		]
 	},
 	{
-<<<<<<< HEAD
-=======
 		"table": "asset_bets",
     	"alias": "bet",
     	"type": "table",
@@ -283,7 +281,6 @@
     	]
 	},
 	{
->>>>>>> c57361ff13480d8f2093e9f7d9611beda04910d6
 		"table": "asset_token",
 		"alias": "t_t",
 		"type": "table",
