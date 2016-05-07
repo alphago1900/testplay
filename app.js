@@ -11,6 +11,7 @@ angular.module('myApp', [
 .controller('ctrl', function($scope,$http) {
 
     $scope.accountInfo = {};
+    $scope.accountInfo.secret = 'garden scan oval hurdle mixed town next plastic exercise jungle bulk smile'
     $scope.secretDialog = {};
     $scope.msgDialog = {};
     //$scope.msgDialog.open = true;
@@ -60,9 +61,9 @@ angular.module('myApp', [
         return;
         console.log('refresh summary',new Date().getTime());
         $scope.invest = data;
-        data.totalProfit /= 100000000;
-        data.maxProfit /= 100000000;
-        data.totalInput /= 100000000;
+        //data.totalProfit /= 100000000;
+        //data.maxProfit /= 100000000;
+        //data.totalInput /= 100000000;
         console.log('summary:',data);
         if(!$scope.$$phase) {
             $scope.$apply();
