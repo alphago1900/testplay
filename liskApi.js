@@ -1,8 +1,8 @@
 var request = require('request');
 
 function liskApi(){
-    //this._baseUrl = 'https://login.lisk.io';
-    this._baseUrl = 'http://lisk.jp:7000';
+    this._baseUrl = 'https://login.lisk.io';
+    //this._baseUrl = 'http://lisk.jp:7000';
 };
 
 
